@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+*{
+    font-family: poppins,sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html{
+    width: 100%;
+    background-image: linear-gradient(to top, #fff1eb 0%, #c6dff2 100%);
+    background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navb{
+    position:relative;
+    background: #fff;
+    z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-back-arrow{
+    margin-right: 10px;
+    color: #08174D;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-header1{
+    margin: 14px 8px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-arrow{
+    margin: 14px 8px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.nav-header2{
+    margin: 14px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.background{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    left: -250px;
+    top: -400px;
+
+    background-color: #08174D;
+    transform: rotate(20deg);
+    border-radius: 0 75% 25% 0;
+    z-index: 0;
+}
+
+.back-arrow{
+    position: absolute;
+    left: 85px;
+    top: 83px;
+    background: #fff;
+    color: #08174D;
+    border-radius: 50%;
+}
+
+.claim{
+    position: absolute;
+    left: 140px;
+    top: 80px;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.date{
+    position: absolute;
+    left: 140px;
+    top: 130px;
+    padding: 5px;
+    background: rgba(58, 130, 247, 0.5);
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.duration{
+    position: absolute;
+    left: 140px;
+    top: 170px;
+    padding: 5px;
+    background: rgba(255, 45, 45, 0.3);
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.accord-container{
+    position: absolute;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.accordion{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+button.accordion-button:not(.collapsed){
+    background: #5378EB;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+button.accordion-button.collapsed{
+    background: #fff;
+    color: #08174D;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+div.accordion-body{
+    background: #fff;
+    color: #08174D;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.button-circle{
+    color: #E1E0EA;
+    margin: 0px 15px 3px 0px;
+}
+
+.body-circle{
+    color: #E1E0EA;
+    margin: 0px 10px 2px 0px;
+}
+
+.body-arrow{
+    position: absolute;
+    right: 30px;
+    margin-top: 8px;
+    color: #08174D;
+}
+
+.accord-mins{
+    position: absolute;
+    right: 80px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #08174D;
+}
+
+.dotted-line{
+    position: absolute;
+    top: 71px;
+    left: 50px;
+    height: 210px;
+    border-left: 4px dashed #E1E0EA;
+    z-index: -1;
+}
+
+@media (max-width: 992px) { 
+    .navb{
+        display:none;
+    }
+    .back-arrow{
+        top: 50px;
+    }
+    .claim{
+        top: 47px;
+    }
+    .date{
+        top: 97px
+    }
+    .duration{
+        top: 137px
+    }
+}
+
+@media (min-width: 992px) {
+    .back-arrow{
+        display: none;
+    }
+    button.accordion-button:not(.collapsed){
+        font-size: 26px;
+    }
+    button.accordion-button.collapsed{
+        font-size: 26px;
+    }
+    div.accordion-body{
+        font-size: 23px;
+    }
+    .accord-mins{
+        font-size: 16px;
+    }
 }
